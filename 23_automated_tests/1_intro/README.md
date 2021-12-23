@@ -1,0 +1,11 @@
+- The test of a function never stays on the same file of the function
+- The file name must be in this format: `<anything>_test.go`
+- You can have different packages on the same folder for tests
+- All test functions must start with the word "Test" followed by another on camel case
+- All test functions must receive a parameter of type `*testing.T`
+- To run all tests: `go test <folder_name | package_name`
+- If no arguments is passed to test, it looks on the current folder: `go test`
+- To look for all tests and execute them: `go test ./...`
+- Get cover simple report: `go test ./... --cover`
+- Get cover report on a file: `go test ./... --coverprofile outputfile`
+  - To read the outputfile: `go tool cover --func=outputfile` or `go tool cover --html=outputfile`
